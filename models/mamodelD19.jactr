@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actr>
+ <model name="mamodelD19" version="6" >
+  <modules>
+   <module class="de.monochromata.jactr.dl.CollectionDeclarativeLearningModule6" import="true">
+    <parameters>
+     <parameter name="BaseLevelLearningRate" value="0.5"/>
+     <parameter name="MaximumAssociativeStrength" value="NaN"/>
+     <parameter name="OptimizedLearning" value="10"/>
+    </parameters>
+   </module>
+   <module class="de.monochromata.jactr.dm.NonMergingDeclarativeModule6" import="true">
+    <parameters>
+     <parameter name="ActivationNoise" value="0"/>
+     <parameter name="BaseLevelConstant" value="0"/>
+     <parameter name="ChunkConfiguratorClass" value="org.jactr.core.module.declarative.basic.chunk.NoOpChunkConfigurator"/>
+     <parameter name="ChunkFactoryClass" value="org.jactr.core.module.declarative.basic.chunk.DefaultChunkFactory"/>
+     <parameter name="ChunkNamerClass" value="org.jactr.core.module.declarative.basic.chunk.NoOpChunkNamer"/>
+     <parameter name="ChunkTypeConfiguratorClass" value="org.jactr.core.module.declarative.basic.type.NoOpChunkTypeConfigurator"/>
+     <parameter name="ChunkTypeFactoryClass" value="org.jactr.core.module.declarative.basic.type.DefaultChunkTypeFactory"/>
+     <parameter name="ChunkTypeNamerClass" value="org.jactr.core.module.declarative.basic.type.NoOpChunkTypeNamer"/>
+     <parameter name="EnablePartialMatching" value="false"/>
+     <parameter name="MaximumDifference" value="-1"/>
+     <parameter name="MaximumSimilarity" value="0"/>
+     <parameter name="MismatchPenalty" value="1"/>
+     <parameter name="PermanentActivationNoise" value="0"/>
+     <parameter name="SubsymbolicChunkFactoryClass" value="org.jactr.core.module.declarative.basic.chunk.DefaultSubsymbolicChunkFactory5"/>
+     <parameter name="SubsymbolicChunkTypeFactoryClass" value="org.jactr.core.module.declarative.basic.type.DefaultSubsymbolicChunkTypeFactory"/>
+     <parameter name="SymbolicChunkFactoryClass" value="de.monochromata.jactr.tls.SymbolicChunkFactory"/>
+     <parameter name="SymbolicChunkTypeFactoryClass" value="org.jactr.core.module.declarative.basic.type.DefaultSymbolicChunkTypeFactory"/>
+    </parameters>
+   </module>
+   <module class="org.jactr.core.module.goal.six.DefaultGoalModule6" import="true"/>
+   <module class="org.jactr.core.module.imaginal.six.DefaultImaginalModule6" import="true">
+    <parameters>
+     <parameter name="AddDelayTime" value="0.2"/>
+     <parameter name="ModifyDelayTime" value="0.2"/>
+     <parameter name="RandomizeDelaysEnabled" value="false"/>
+    </parameters>
+   </module>
+   <module class="org.jactr.core.module.procedural.six.learning.DefaultProceduralLearningModule6" import="true">
+    <parameters>
+     <parameter name="EnableProductionCompilation" value="false"/>
+     <parameter name="ExpectedUtilityEquation" value="org.jactr.core.module.procedural.six.learning.DefaultExpectedUtilityEquation"/>
+     <parameter name="IncludeBuffers" value="goal, retrieval, imaginal"/>
+     <parameter name="OptimizedLearning" value="10"/>
+     <parameter name="ParameterLearningRate" value="0.2"/>
+    </parameters>
+   </module>
+   <module class="org.jactr.core.module.procedural.six.DefaultProceduralModule6" import="true">
+    <parameters>
+     <parameter name="DefaultProductionFiringTime" value="0.05"/>
+     <parameter name="ExpectedUtilityNoise" value="0"/>
+     <parameter name="NumberOfProductionsFired" value="0"/>
+    </parameters>
+   </module>
+   <module class="de.monochromata.jactr.twm.TWMModule" import="true">
+    <parameters>
+     <parameter name="conceptualSchemaChunkType" value="tlsConceptualSchema"/>
+     <parameter name="lexicalizedConceptualSchemaChunkType" value="tlsLexicalizedConceptualSchema"/>
+     <parameter name="wordChunkType" value="tlsWord"/>
+     <parameter name="referencePotentialChunkType" value="tlsReferencePotential"/>
+     <parameter name="schemaCreationDurationS" value="0.05"/>
+     <parameter name="twmBufferCapacity" value="7"/>
+     <parameter name="twmGraphemicBufferCapacity" value="7"/>	
+    </parameters>
+   </module>
+   <module class="de.monochromata.jactr.remma.REMMAModule" import="true">
+    <parameters>
+     <parameter name="pathToEvents" value="C:\\Users\\monochromata\\git\\ecem.git\\MAModel\\configuration\\D19\\remmaInputD19.log"/>
+     <parameter name="pathToJSON" value="C:\\Users\\monochromata\\git\\ecem.git\\MAModel\\configuration\\D19\\astD19.json"/>
+     <parameter name="featureThatMarksMethodSchemata" value="featuresOf:CS#Java$MethodDeclaration"/>
+     <parameter name="encodingFactor" value="0.006"/>
+     <parameter name="encodingExponentFactor" value="0.4"/>
+     <parameter name="defaultFrequency" value="0.01"/>
+     <parameter name="screenWidthMM" value="379"/>
+     <parameter name="screenWidthPx" value="1280"/>
+     <parameter name="screenHeightMM" value="304"/>
+     <parameter name="screenHeightPx" value="1024"/>
+     <parameter name="distanceToScreenMM" value="600"/>
+     <parameter name="cancellableProgrammingDurationS" value="0.135"/>
+     <parameter name="nonCancellableProgrammingDurationS" value="0.05"/>
+    </parameters>
+   </module>
+   <module class="org.jactr.core.module.random.six.DefaultRandomModule" import="true">
+    <parameters>
+     <parameter name="RandomSeed" value=""/>
+     <parameter name="TimeRandomizer" value="3"/>
+    </parameters>
+   </module>
+   <module class="de.monochromata.jactr.rm.ScopedRetrievalModule6" import="true">
+    <parameters>
+     <parameter name="EnableIndexedRetrievals" value="false"/>
+     <parameter name="FINSTDurationTime" value="3.0"/>
+     <parameter name="LatencyFactor" value="1"/>
+     <parameter name="NumberOfFINSTs" value="4"/>
+     <parameter name="RetrievalThreshold" value="0"/>
+    </parameters>
+   </module>
+  </modules>
+  <import url="de/monochromata/jactr/dm/declarative.jactr"/>
+  <import url="de/monochromata/jactr/twm/twm.jactr"/>
+  <declarative-memory>
+  
+  <!-- **************************************************
+       * declarative memory container for chunks and chunk-types
+       ************************************************** 
+  -->
+  </declarative-memory>
+  <procedural-memory>
+  
+  <!-- **************************************************
+       * procedural memory container for productions
+       ************************************************** 
+  -->
+  
+   <!-- get-next-word-from-remma -->	
+   <production name="get-next-word-from-remma">
+    <conditions>
+     <query buffer="remma">
+      <slot name="state" equals="free"/>
+      <slot name="buffer" equals="empty"/>
+     </query>
+    </conditions>	
+    <actions>
+     <add buffer="remma" type="get-next-word"/>
+    </actions>
+   </production>
+  
+   <!-- pass-word-from-remma-to-twm -->	
+   <production name="pass-word-from-remma-to-twm">
+    <conditions>
+     <match buffer="remma" type="tlsWord"/>
+     <query buffer="remma">
+      <slot name="state" equals="free"/>
+     </query>
+     <query buffer="twm">
+      <slot name="state" equals="free"/>
+     </query>
+    </conditions>	
+    <actions>
+     <add buffer="twm" chunk="=remma"/>
+     <add buffer="remma" type="get-next-word"/>
+    </actions>
+   </production>
+
+  </procedural-memory>
+  
+  
+  
+  <!-- **************************************************
+       * Buffer definitions
+       ************************************************** 
+  -->
+  <buffer name="twm">
+   <parameters>
+    <parameter name="Activation" value="1"/>
+    <parameter name="G" value="20"/>
+    <parameter name="StrictHarvestingEnabled" value="false"/>
+   </parameters>
+  </buffer>
+  <buffer name="twmGraphemic">
+   <parameters>
+    <parameter name="Activation" value="1"/>
+    <parameter name="G" value="20"/>
+    <parameter name="StrictHarvestingEnabled" value="false"/>
+   </parameters>
+  </buffer>
+  <buffer name="goal" >
+   <parameters>
+    <parameter name="Activation" value="1"/>
+    <parameter name="G" value="20"/>
+    <parameter name="StrictHarvestingEnabled" value="false"/>
+   </parameters>
+  </buffer>
+  <buffer name="imaginal" >
+   <parameters>
+    <parameter name="Activation" value="0"/>
+    <parameter name="G" value="0"/>
+    <parameter name="StrictHarvestingEnabled" value="true"/>
+   </parameters>
+  </buffer>
+  <buffer name="retrieval" >
+   <parameters>
+    <parameter name="Activation" value="0"/>
+    <parameter name="G" value="0"/>
+    <parameter name="StrictHarvestingEnabled" value="true"/>
+   </parameters>
+  </buffer>
+  <parameters>
+   <parameter name="EnableUnusedCycleSkipping" value="true"/>
+  </parameters>
+ </model>
+ </actr>

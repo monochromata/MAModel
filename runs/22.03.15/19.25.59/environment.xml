@@ -1,0 +1,59 @@
+<!-- automatically generated environment.xml file -->
+<environment>
+<!-- jactr controller configuration -->
+<controller class="org.jactr.core.runtime.controller.debug.DebugController" />
+<!-- Connector specifies how we interface with common reality, if at all -->
+<connector class="org.jactr.core.reality.connector.LocalConnector"/>
+ <models>
+  <model url="mamodelA3.jactr" alias="mamodelA3"/>
+ </models>
+<attachments>
+ <attachment class="de.monochromata.jactr.instruments.activation.ActivationGraph" attach="all">
+ <parameters>
+  <parameter name="pathToConfigXML" value="C:\Users\monochromata\git\ecem.git\MAModel\configuration\A3\activationGraphConfig.xml"/>
+ </parameters>
+</attachment>
+ <attachment class="de.monochromata.jactr.instruments.fixations.FixationDurations" attach="all">
+ <parameters>
+  <parameter name="logSeparator" value=";"/>
+  <parameter name="generatedFixationsLogFileName" value="generatedFixations.log"/>
+ </parameters>
+</attachment>
+ <attachment class="de.monochromata.jactr.instruments.regressions.RegressionPathDurations" attach="all">
+ <parameters>
+  <parameter name="logSeparator" value=";"/>
+  <parameter name="aggregatedRegressionPathsLogFileName" value="aggregatedRegressionPaths.log"/>
+  <parameter name="generatedRegressionPathsLogFileName" value="generatedRegressionPaths.log"/>
+ </parameters>
+</attachment>
+ <attachment class="org.jactr.tools.stat.StatTracker" attach="all">
+ <parameters>
+  <parameter name="SampleFrequency" value="100"/>
+ </parameters>
+</attachment>
+ <attachment class="de.monochromata.jactr.instruments.ErrorLog" attach="all">
+ <parameters>
+  <parameter name="errorLogFileName" value="errors.log"/>
+ </parameters>
+</attachment>
+<!-- this attachment sets up the network  communication and control -->
+ <attachment class="org.jactr.tools.async.controller.RemoteInterface" attach="all">
+   <parameters>
+     <parameter name="transportClass" value="org.commonreality.mina.transport.NIOTransportProvider"/>
+     <parameter name="protocolClass" value="org.commonreality.mina.protocol.SerializingProtocol"/>
+     <parameter name="serviceClass" value="org.commonreality.mina.service.ClientService"/>
+     <parameter name="credentials" value="monochromata:325551090975167116"/>
+     <parameter name="address" value="127.0.0.1:50858"/>
+     <parameter name="SendModelOnSuspend" value="false"/>
+   </parameters>
+</attachment>
+<!-- and this routes events like log and production firing over the network -->
+ <attachment class="org.jactr.tools.tracer.RuntimeTracer" attach="all">
+  <parameters>
+   <parameter name="Executor" value="Background"/>
+   <parameter name="ITraceSinkClass" value="org.jactr.tools.tracer.sinks.NetworkedSink"/>
+   <parameter name="ListenerClasses" value="org.jactr.tools.tracer.listeners.BufferTracer,org.jactr.tools.tracer.listeners.LogTracer"/>
+  </parameters>
+ </attachment>
+</attachments>
+</environment>

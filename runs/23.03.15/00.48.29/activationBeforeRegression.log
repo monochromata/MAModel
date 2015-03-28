@@ -1,0 +1,26 @@
+441.82 On-line activation of anaphor  7:  estimated: -8.158 (LOW) computed: 2.974 for default=CS#RegistrarLocator.getRegistrarARGSSGRA.return.type
+441.87 Specifying chunk for anaphor  7: computed activation=3.779 for chunk=CS#RegistrarLocator.getRegistrarARGSSGRA.return.type-3733
+477.32 On-line activation of anaphor  8:  estimated: -9.579 (LOW) computed:  NaN for default=CS#OutriggerImpl.spaceProxy.featuresOf.SpaceProxy.type
+477.37 Specifying chunk for anaphor  8: computed activation=5.154 for chunk=error
+492.69 On-line activation of anaphor 10:  estimated: -12.579 (LOW) computed: 2.150 for default=CS#ServiceRegistration.getLeaseARGSSGRA.return.type
+492.74 Specifying chunk for anaphor 10: computed activation=5.255 for chunk=CS#JavaSpace.writeARGSEntry_longSGRA.return.type-3986
+497.39 On-line activation of anaphor  9:  estimated: -14.947 (LOW) computed: 3.129 for default=CS#ServiceRegistrar.registerARGSServiceItem_longSGRA.return.type
+497.44 Specifying chunk for anaphor  9: computed activation=4.516 for chunk=CS#ServiceRegistrar.registerARGSServiceItem_longSGRA.return.type-1488
+500.25 On-line activation of anaphor 11:  estimated: -22.579 (LOW) computed: 2.930 for default=CS#OutriggerImpl.lrm.featuresOf.LeaseRenewalManager.type
+500.30 Specifying chunk for anaphor 11: computed activation=4.704 for chunk=CS#OutriggerImpl.lrm.featuresOf.LeaseRenewalManager.type-4473
+1725.68 On-line activation of anaphor 45:  estimated: -5.263 (HIGH) computed: 2.604 for default=CS#DiscoveryEvent.getRegistrarsARGSSGRA.return.type
+1725.73 Specifying chunk for anaphor 45: computed activation=1.395 for chunk=CS#DiscoveryEvent.getRegistrarsARGSSGRA
+1752.11 On-line activation of anaphor 46:  estimated: -0.737 (HIGH) computed: 0.670 for default=CS#Service.getServiceIDARGSSGRA.return.type
+1752.16 Specifying chunk for anaphor 46: computed activation=-0.024 for chunk=CS#Service.getServiceIDARGSSGRA
+1765.00 On-line activation of anaphor 47:  estimated: -4.158 (HIGH) computed: 2.002 for default=CS#ServiceRegistrar.getLocatorARGSSGRA.return.type
+1765.05 Specifying chunk for anaphor 47: computed activation=1.086 for chunk=CS#ServiceRegistrar.getLocatorARGSSGRA
+1775.70 On-line activation of anaphor 48:  estimated: -6.158 (LOW) computed: 0.385 for default=CS#ServiceRegistrar.lookupARGSServiceTemplate_intSGRA.return.type
+1775.75 Specifying chunk for anaphor 48: computed activation=6.432 for chunk=error
+1931.65 On-line activation of anaphor 60:  estimated: 2.421 (HIGH) computed: 0.620 for default=CS#Service.getServiceIDARGSSGRA.return.type
+1931.70 Specifying chunk for anaphor 60: computed activation=2.433 for chunk=CS#Service.getServiceIDARGSSGRA
+1978.13 On-line activation of anaphor 59:  estimated: -0.842 (HIGH) computed: 1.416 for default=CS#Voucher.location.featuresOf.Location.type
+1978.18 Specifying chunk for anaphor 59: computed activation=6.557 for chunk=error
+2187.65 On-line activation of anaphor 79:  estimated: -19.895 (LOW) computed: 1.886 for default=CS#JavaSpace.addListenerARGSEntry_RemoteEventListener_longSGRA.return.type
+2187.70 Specifying chunk for anaphor 79: computed activation=6.564 for chunk=error
+2306.33 On-line activation of anaphor 81:  estimated: -10.842 (LOW) computed: 1.155 for default=CS#EventRegistration.getLeaseARGSSGRA.return.type
+2306.38 Specifying chunk for anaphor 81: computed activation=4.497 for chunk=CS#OutriggerImpl.EventRegistration.getLeaseARGSSGRA
